@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1># automatic-score-adventure</h1>
+{% for x in users | reverse %}
+ <li>{{ x["first_name"]  }}</li>
+
+{% endfor %} 
+{% endblock %}
+{% block liens %}
+<a href="/">welcome</a>
+{% endblock %}
+<a href="/add_one_user"> add one user</a><a href="/add_one_score"> add one score</a><a href="/add_one_score"> add one score</a><a href="/add_one_adventure"> add one adventure</a><a href="/add_one_adventurehasscores"> add one adventurehasscores</a><a href="/add_one_city"> add one city</a><a href="/add_one_adventurehasusers"> add one adventurehasusers</a>
