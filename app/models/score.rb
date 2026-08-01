@@ -1,4 +1,6 @@
 class Score < ApplicationRecord
+has_many :colornotes
+accepts_nested_attributes_for :colornotes, allow_destroy: true
 after_create do
 
 [["0", "NATURAL"],
