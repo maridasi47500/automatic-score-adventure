@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @colornote %>
+
+<div>
+  <%= link_to "Edit this colornote", edit_colornote_path(@colornote) %> |
+  <%= link_to "Back to colornotes", colornotes_path %>
+
+  <%= button_to "Destroy this colornote", @colornote, method: :delete %>
+</div>

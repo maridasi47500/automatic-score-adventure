@@ -1,0 +1,64 @@
+<%= form_with(model: score) do |form| %>
+  <% if score.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+        <% score.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :composer, style: "display: block" %>
+    <%= form.text_field :composer %>
+  </div>
+
+  <div>
+    <%= form.label :time_signature, style: "display: block" %>
+    <%= form.text_field :time_signature %>
+  </div>
+
+  <div>
+    <%= form.label :key_signature, style: "display: block" %>
+    <%= form.text_field :key_signature %>
+  </div>
+
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div>
+    <%= form.label :adventure_description, style: "display: block" %>
+    <%= form.text_field :adventure_description %>
+  </div>
+<%=form.fields_for :colornotes do |f|%>
+<div style="border: 1px solid green;">
+<h2>Color note</h2>
+  <div>
+    <%= f.label :alteration, style: "display: block" %>
+    <%= f.select :alteration, collection_for_select(["FLAT", "SHARP", "NATURAL"]) %>
+  </div>
+  <div>
+    <%= f.label :notedegree, style: "display: block" %>
+    <%= f.text_field :notedegree %>
+  </div>
+  <div>
+    <%= f.label :color_id, style: "display: block" %>
+    <%= f.collection_select :color_id, Color.all, :id, :name %>
+  </div>
+</div>
+<%end%>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

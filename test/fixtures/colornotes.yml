@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  degreenote: MyString
+  color: one
+  alteration: MyString
+  score: one
+
+two:
+  degreenote: MyString
+  color: two
+  alteration: MyString
+  score: two

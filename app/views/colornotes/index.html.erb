@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Colornotes</h1>
+
+<div id="colornotes">
+  <% @colornotes.each do |colornote| %>
+    <%= render colornote %>
+    <p>
+      <%= link_to "Show this colornote", colornote %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New colornote", new_colornote_path %>

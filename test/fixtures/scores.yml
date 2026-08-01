@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  composer: MyString
+  time_signature: MyString
+  key_signature: MyString
+  content: MyString
+  adventure_description: MyString
+
+two:
+  title: MyString
+  composer: MyString
+  time_signature: MyString
+  key_signature: MyString
+  content: MyString
+  adventure_description: MyString

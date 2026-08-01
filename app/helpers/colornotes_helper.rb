@@ -1,0 +1,2 @@
+module ColornotesHelper
+end

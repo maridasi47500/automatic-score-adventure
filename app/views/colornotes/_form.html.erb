@@ -1,0 +1,37 @@
+<%= form_with(model: colornote) do |form| %>
+  <% if colornote.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(colornote.errors.count, "error") %> prohibited this colornote from being saved:</h2>
+
+      <ul>
+        <% colornote.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :degreenote, style: "display: block" %>
+    <%= form.text_field :degreenote %>
+  </div>
+
+  <div>
+    <%= form.label :color_id, style: "display: block" %>
+    <%= form.text_field :color_id %>
+  </div>
+
+  <div>
+    <%= form.label :alteration, style: "display: block" %>
+    <%= form.text_field :alteration %>
+  </div>
+
+  <div>
+    <%= form.label :score_id, style: "display: block" %>
+    <%= form.text_field :score_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
