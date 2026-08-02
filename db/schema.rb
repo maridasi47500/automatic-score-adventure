@@ -10,14 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_08_01_214756) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_01_215727) do
   create_table "colornotes", force: :cascade do |t|
     t.string "degreenote"
     t.integer "color_id", null: false
     t.string "alteration"
+    t.integer "score_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["color_id"], name: "index_colornotes_on_color_id"
+    t.index ["score_id"], name: "index_colornotes_on_score_id"
   end
 
   create_table "colors", force: :cascade do |t|
@@ -38,4 +40,5 @@ ActiveRecord::Schema[7.1].define(version: 2026_08_01_214756) do
   end
 
   add_foreign_key "colornotes", "colors"
+  add_foreign_key "colornotes", "scores"
 end

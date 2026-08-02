@@ -1,4 +1,6 @@
 # automatic scores adventure
+![alt text](myscore1.png)
+
 part de ta ville, cree de partition automatique avec des couleurs ou non, avant de partir à l'aventure
 
   -  create a band , wiht a name

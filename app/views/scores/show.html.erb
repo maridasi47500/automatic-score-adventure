@@ -1,6 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @score %>
+<img src="/uploads/mapartition<%=@score.id%>/<%=@score.mypic%>"/>
+
 
 <div>
   <%= link_to "Edit this score", edit_score_path(@score) %> |

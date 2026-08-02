@@ -45,11 +45,11 @@
 <h2>Color note</h2>
   <div>
     <%= f.label :alteration, style: "display: block" %>
-    <%= f.select :alteration, collection_for_select(["FLAT", "SHARP", "NATURAL"]) %>
+    <%= f.select :alteration, ["FLAT", "SHARP", "NATURAL"] %>
   </div>
   <div>
-    <%= f.label :notedegree, style: "display: block" %>
-    <%= f.text_field :notedegree %>
+    <%= f.label :degreenote, style: "display: block" %>
+    <%= f.text_field :degreenote %>
   </div>
   <div>
     <%= f.label :color_id, style: "display: block" %>
